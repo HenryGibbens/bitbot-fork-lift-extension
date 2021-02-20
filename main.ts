@@ -7,12 +7,6 @@ function stop () {
     basic.pause(1000)
     bitbot.ledClear()
 }
-input.onButtonPressed(Button.A, function () {
-    radio.sendString("start")
-})
-input.onGesture(Gesture.TiltLeft, function () {
-    radio.sendString("Let")
-})
 function RIGHT () {
     bitbot.move(BBMotor.Right, BBDirection.Forward, 60)
 }
@@ -30,12 +24,6 @@ radio.onReceivedString(function (receivedString) {
             stop()
         }
     }
-})
-input.onButtonPressed(Button.B, function () {
-    radio.sendString("stop")
-})
-input.onGesture(Gesture.TiltRight, function () {
-    radio.sendString("right")
 })
 function start () {
     bitbot.setLedColor(0x18E600)
